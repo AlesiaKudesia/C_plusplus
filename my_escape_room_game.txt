@@ -1,0 +1,94 @@
+#include <iostream>
+
+int main(){
+  // Horror (?) story
+  int answer1, answer2, answer3, answer4, answer5;
+  int pin;
+  std::cout << "Here starts our story.\nYou wake up in an unfamiliar room. You see in the room a door, a window and a telephone. What will you do?\n";
+
+  std::cout << "I'll: \n";
+  std::cout << "1. Go and try to open the door\n2. Try to open window\n3. Take the phone and try to call a friend\n";
+  std::cin >> answer1;
+  if(answer1 == 1){
+    std::cout << "You try to open the door, but it is locked. You see that there is keypad with numbers near the lock. It is written Enter code: ...  Three numbers on keypad look worn off: 5, 2, 9, so you assume that the code should consist of these three numbers. Try to unlock the door: \n";
+    std::cin >> pin;
+
+    for(int tries = 1; tries <= 3; tries++){
+      if(pin == 295){
+        std::cout << "Great job! You opened the door. You look outside: you are in your home city. You just forget all about the room and go home. Bye!";
+        break;
+      }
+      else if(tries==3){
+        std::cout << "You cannot get out of the room. You stay there forever.";
+        break;
+      }
+      else{
+        std::cout << "Wrong code. Try again.";
+        std::cin >> pin;
+      }
+    }
+  }
+  else if(answer1 == 2){
+    std::cout << "You went to the window and tried to open it. It can be opened, but it looks to small for you to get through. What do you choose to do further?\n1. Try to get through window.\n2. Go to the door.\n";
+    std::cin >> answer4;
+    if(answer4 == 1){
+      std::cout << "You stuck in the window and cannot get out. Outside you see an empty dirty street. Now you can just wait and hope that someone will find and help you. Bust most probably it will not happen. Bye!";
+    }
+    else if(answer4 == 2){
+      std::cout << "You try to open the door, but it is locked. You see that there is keypad with numbers near the lock. It is written Enter code: ...  Three numbers on keypad look worn off: 5, 2, 9, so you assume that the code should consist of these three numbers. Try to unlock the door: \n";
+    std::cin >> pin;
+
+    for(int tries = 1; tries <= 3; tries++){
+      if(pin == 295){
+        std::cout << "Great job! You opened the door. You look outside: you are in your home city. You just forget all about the room and go home. Bye!";
+        break;
+      }
+      else if(tries==3){
+        std::cout << "You cannot get out of the room. You stay there forever.";
+        break;
+      }
+      else{
+        std::cout << "Wrong code. Try again.";
+        std::cin >> pin;
+      }
+    }
+    }
+    else{
+      std::cout << "Wrong choice. You stay in the room forever.";
+    }
+  }
+  else if(answer1 == 3){
+    std::cout << "You take the phone and try to make a call. You call your friend but she cannot hear you at all. She does not know who is calling, she thinks it is a prank, so she hangs up. But then, phone starts ringing - someone is calling you! Do you take the call?\n1. Yes\n2. No\n";
+    std::cin >> answer5;
+    if(answer5 ==1){
+      std::cout << "You decide to take the call. And there is a person on the other side of the line who says that he left his phone in some storage room. You tell him that you are in this storage room and you can get him his phone back, but he should tell you how you can get out of here. He said that the door lock has a code 295. You open the door. You look outside: you are in your home city. You just forget all about the room and go home. Bye!\n";
+    }
+    else if(answer5 == 2){
+      std::cout << "You decide to decline the call and go to the door.You try to open the door, but it is locked. You see that there is keypad with numbers near the lock. It is written Enter code: ...  Three numbers on keypad look worn off: 5, 2, 9, so you assume that the code should consist of these three numbers. Try to unlock the door: \n";
+    std::cin >> pin;
+
+    for(int tries = 1; tries <= 3; tries++){
+      if(pin == 295){
+        std::cout << "Great job! You opened the door. You look outside: you are in your home city. You just forget all about the room and go home. Bye!";
+        break;
+      }
+      else if(tries==3){
+        std::cout << "You cannot get out of the room. You stay there forever.";
+        break;
+      }
+      else{
+        std::cout << "Wrong code. Try again.";
+        std::cin >> pin;
+      }
+    }
+    }
+    else{
+      std::cout << "Wrong choice. You stay in the room forever.";
+
+    }
+    }
+    else{
+      std::cout << "Wrong choice. You stay in the room forever.";
+
+    }
+}
